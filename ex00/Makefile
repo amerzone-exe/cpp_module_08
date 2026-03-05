@@ -2,7 +2,7 @@ NAME = Easyfind
 
 CXX = c++
 
-FLAGS = -Wall -Wextra -Werror -MMD -std=c++98
+FLAGS = -Wall -Wextra -Werror -MMD -std=c++98 -g3
 
 INC = inc
 
