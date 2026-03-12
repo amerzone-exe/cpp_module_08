@@ -15,3 +15,13 @@ int main()
 
 	return 0;
 }
+
+// for (unsigned int i = 0; i < 10; i++)
+// {
+// 	vector.push_back(generateValue());
+// 	std::cout << i << std::endl;
+// }
+// vector.push_back(5);
+// std::fill(vector.begin(), vector.end(), generateValue());
+// for(it = vector.begin(); it != vector.end(); it++)
+// 	vector.insert(it, generateValue());

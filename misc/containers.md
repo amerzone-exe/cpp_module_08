@@ -45,6 +45,11 @@ Les listes (tout comme les vecteurs) permettent de stocker plusieurs elements d'
 Le differences avec les vecteurs sont:
 
 - On peut supprimer les elements du debut et de la fin de la liste.
-- Elle n'a pas de memoire contigu.
-- 
--
+- Elle n'a pas de memoire contigue, de ce fait le temps pour ajouter/inserer un element est constant par rapport au vector. Cepedant l'accés à chacuns des elements est plus long.
+
+(lire : https://www.delftstack.com/fr/howto/cpp/cpp-list-vs-vector/)
+
+## Deque
+
+Fonctionne comme une list mais possede un temps de traitement des extremité plus rapide que list car il possede un systeme de file d'attente aux 2 extremités.
+Cepedant l'accés ou l'insertion au milieu de **deque** est moins efficace.

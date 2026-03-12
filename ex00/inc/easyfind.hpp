@@ -6,7 +6,7 @@
 /*   By: jpiquet <jpiquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 12:47:32 by jocelyn           #+#    #+#             */
-/*   Updated: 2026/03/05 11:58:06 by jpiquet          ###   ########.fr       */
+/*   Updated: 2026/03/12 19:04:25 by jpiquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #define EASYFIND_HPP
 
 #include <algorithm>
-
 #include <vector>
 #include <list>
 #include <deque>
@@ -29,10 +28,9 @@ typename T::const_iterator		easyfind( T const & container, int value )
 	return it;
 }
 
-template<typename T>
-void	printValues( T const & container )
+void	printValues( int value )
 {
-	std::cout << container << " " << std::flush;
+	std::cout << value << " " << std::flush;
 }
 
 #endif
