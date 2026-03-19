@@ -6,14 +6,14 @@
 /*   By: jpiquet <jpiquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/12 19:06:51 by jpiquet           #+#    #+#             */
-/*   Updated: 2026/03/12 19:29:10 by jpiquet          ###   ########.fr       */
+/*   Updated: 2026/03/19 18:35:25 by jpiquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SPAN_HPP
 #define SPAN_HPP
 
-#include <list>
+#include <vector>
 
 class Span
 {
@@ -26,12 +26,22 @@ class Span
 
 		void	addNumber( int value );
 
+		template <typename it>
+		void	addRange(it first, it last)
+		{
+			while (first != last)
+			{
+				addNumber(*first);
+				++first;
+			}
+		}
+
 		unsigned int shortestSpan( void );
 		unsigned int longestSpan( void );
 
 	private:
-		std::list<int>	_values;
-		unsigned int	_max;
+		std::vector<int>	_values;
+		unsigned int		_max;
 };
 
 #endif

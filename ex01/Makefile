@@ -1,4 +1,4 @@
-NAME = Span
+NAME = span
 
 CXX = c++
 
@@ -9,6 +9,7 @@ INC = inc
 OBJDIR = obj/
 
 SRC =	main.cpp \
+		Span.cpp
 
 OBJ := $(addprefix $(OBJDIR), $(SRC:.cpp=.o))
 DEPS = $(OBJ:.o=.d)
