@@ -6,27 +6,21 @@
 /*   By: jpiquet <jpiquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 18:58:39 by jpiquet           #+#    #+#             */
-/*   Updated: 2026/03/24 20:38:54 by jpiquet          ###   ########.fr       */
+/*   Updated: 2026/03/31 09:22:58 by jpiquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stack>
 #include "MutantStack.hpp"
+// #include <stack>
 #include <iostream>
 
 int main(void)
 {
-	// std::stack<int> test;
 	MutantStack<int> mstack;
 
-	mstack.push(5);
-	mstack.push(17);
-	
-	std::cout << mstack.top() << std::endl;
-	
-	mstack.pop();
-	
-	std::cout << mstack.size() << std::endl;
-	
+	MutantStack<int>::iterator it;
+
+	it = mstack.begin();
+
 	return 0;
 }

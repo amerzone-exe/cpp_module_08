@@ -6,7 +6,7 @@
 /*   By: jpiquet <jpiquet@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 18:56:45 by jpiquet           #+#    #+#             */
-/*   Updated: 2026/03/24 20:42:25 by jpiquet          ###   ########.fr       */
+/*   Updated: 2026/03/31 09:34:53 by jpiquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,23 @@
 #define MUTANTSTACK_HPP
 
 #include <cstdlib>
+#include <stack>
+
 
 template <typename T>
-class MutantStack
+class MutantStack : public std::stack<T>
 {
     public:
         MutantStack( void );
 		MutantStack( MutantStack const & src );
 		MutantStack & operator=( MutantStack const & rightSide );
         ~MutantStack( void );
-
-		bool	empty( void ) const;
-		size_t	size( void ) const;
 		
-		T const &	top( void ) const;
+		typedef typename std::stack<T>::container_type::iterator iterator;
 
-		void	push( T const & newElement );
-		void	pop( void );
+		typename MutantStack<T>::iterator begin( void );
+		typename MutantStack<T>::iterator end( void );
 
-	private:
-		T*		_array;
-		size_t	_size;
 };
 
 #include "MutantStack.tpp"
